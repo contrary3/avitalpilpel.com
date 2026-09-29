@@ -1,0 +1,257 @@
+/* ==========================================================================
+   Avital Pilpel Academic & Professional Website
+   Clean, modern, responsive styles for GitHub Pages
+   ========================================================================== */
+
+:root {
+  --bg-color: #fbfbfb;
+  --surface-color: #ffffff;
+  --text-color: #212529;
+  --text-muted: #555e68;
+  --border-color: #e9ecef;
+  --link-color: #1a56db;
+  --link-hover: #1e40af;
+  --header-bg: #1f2937;
+  --nav-text: #e5e7eb;
+  --nav-hover: #ffffff;
+  --nav-active: #60a5fa;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --max-width: 860px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #111827;
+    --surface-color: #1f2937;
+    --text-color: #f3f4f6;
+    --text-muted: #9ca3af;
+    --border-color: #374151;
+    --link-color: #60a5fa;
+    --link-hover: #93c5fd;
+    --header-bg: #0f172a;
+    --nav-text: #cbd5e1;
+    --nav-hover: #ffffff;
+    --nav-active: #38bdf8;
+    --card-bg: #1f2937;
+    --card-border: #374151;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.site-header {
+  background-color: var(--header-bg);
+  color: #ffffff;
+  padding: 2rem 1rem 1.25rem;
+  text-align: center;
+  border-bottom: 3px solid #2563eb;
+}
+
+.site-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.35rem 0;
+}
+
+.site-header h1 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.site-header .subtitle {
+  font-size: 0.98rem;
+  color: #cbd5e1;
+  margin-bottom: 1.25rem;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-nav a {
+  color: var(--nav-text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.site-nav a:hover {
+  color: var(--nav-hover);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.site-nav a.active {
+  color: var(--nav-active);
+  font-weight: 600;
+  background-color: rgba(96, 165, 250, 0.15);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 2.25rem auto;
+  padding: 0 1.25rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+h2 {
+  font-size: 1.45rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+p {
+  margin-bottom: 1.35rem;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+.content-with-image {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.content-with-image .text-col {
+  flex: 1 1 65%;
+}
+
+.content-with-image .img-col {
+  flex: 0 0 280px;
+  text-align: center;
+}
+
+.content-with-image .img-col img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.research-topic {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.research-topic h3 {
+  margin-top: 0;
+  color: #1e40af;
+}
+
+@media (prefers-color-scheme: dark) {
+  .research-topic h3 {
+    color: #60a5fa;
+  }
+}
+
+figure {
+  margin: 1.75rem 0;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 2rem 0;
+}
+
+.site-footer {
+  margin-top: 4rem;
+  padding: 2.25rem 1.25rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.site-footer p {
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 768px) {
+  .content-with-image {
+    flex-direction: column-reverse;
+  }
+
+  .content-with-image .img-col {
+    margin: 0 auto 1.5rem auto;
+  }
+
+  .site-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .site-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+}
